@@ -1,0 +1,110 @@
+/* Fonts */
+@font-face {
+    font-family: "Fx-LED";
+    src: url("fonts/Fx-LED.TTF");
+}
+
+@font-face {
+    font-family: "Hack";
+    src: url("fonts/hack-Bold.ttf");
+}
+
+/* Body Styling */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #1a1a1a;
+    margin: 0;
+    font-family: "Fx-LED", sans-serif;
+}
+
+/* Digital Clock Container */
+.digital-clock {
+    background-color: #000;
+    color: #fff;
+    display: flex;
+    border-radius: 2rem;
+    user-select: none;
+    padding: 1rem 2rem;
+    border: 0.5rem solid #2d2d2d;
+    font-family: "Fx-LED";
+}
+
+/* Weekdays Styling */
+.week {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 3rem;
+    color: #2d2d2d;
+    font-weight: bold;
+    font-family: "Hack";
+    margin-right: 1rem;
+}
+
+.week div {
+    text-align: center;
+}
+
+.week .active {
+    color: #fff;
+}
+
+/* Time Styling */
+.time {
+    display: flex;
+    align-items: center;
+    font-size: 8rem; /* Default font size for desktop */
+}
+
+#hour, #min, #sec {
+    display: inline-block;
+}
+
+#dot1, #dot2 {
+    display: inline-block;
+    margin: 0 0.5rem;
+}
+
+/* Invisible Class for Blinking Effect */
+.invisible {
+    visibility: hidden;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    /* Adjust font size for smaller screens */
+    .time {
+        font-size: 4rem; /* Smaller font size for mobile */
+    }
+
+    /* Adjust padding and margins for smaller screens */
+    .digital-clock {
+        padding: 0.5rem 1rem;
+        border-radius: 1rem;
+    }
+
+    .week {
+        width: 2rem; /* Smaller width for weekdays */
+        margin-right: 0.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Further adjustments for very small screens */
+    .time {
+        font-size: 3rem; /* Even smaller font size */
+    }
+
+    .digital-clock {
+        padding: 0.5rem;
+        border-radius: 0.5rem;
+    }
+
+    .week {
+        width: 1.5rem; /* Even smaller width for weekdays */
+        margin-right: 0.25rem;
+    }
+}
